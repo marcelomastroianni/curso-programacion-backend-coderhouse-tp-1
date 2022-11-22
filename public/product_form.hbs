@@ -1,0 +1,112 @@
+<form action="/api/productos" name="product_form" id="product_form"  method="POST">
+    <div class="m-4">
+
+        <div class="text-left">
+
+
+            <div class="row">
+                <div class="col-12">
+
+                    {{#if product}}
+                        <h1 style="color:blue">Modificación Producto</h1>
+                    {{else}}
+                        <h1 style="color:blue">Alta Producto</h1>
+                    {{/if}}
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="name" class="form-label">Nombre</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                <input type="text" class="form-control" name="name" id="name" value="{{product.name}}" />
+                </div>
+            
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="description" class="form-label">Descripcion</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                <input type="text" class="form-control" name="description" id="description" value="{{product.description}}" />
+                </div>
+            
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="code" class="form-label">Codigo</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                <input type="text" class="form-control" name="code" id="code" value="{{product.code}}" />
+                </div>
+            
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                        <label for="price" class="form-label">Precio</label> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="number" class="form-control"  name="price" id="price" value="{{product.price}}" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="stock" class="form-label">Stock</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" class="form-control" name="stock" id="stock" value="{{product.stock}}" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="photo_url" class="form-label">Foto Url</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" class="form-control" name="photo_url" id="photo_url" value="{{product.photo_url}}" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <br/>
+                    {{#if product}}
+                        <button type="submit" class="btn btn-success">Actualizar</button>
+                    {{else}}
+                        <button type="submit" class="btn btn-success">Crear</button>
+                    {{/if}}
+
+                    <a href="/index.html?is_admin=true" class="btn btn-primary">Volver</a>
+
+                </div> 
+            </div>
+
+
+        </div>
+
+        <br/>
+    </div>
+    </form>
